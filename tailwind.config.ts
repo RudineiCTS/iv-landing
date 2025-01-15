@@ -11,7 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        rosaSuave:'var(--rosa-suave)'
       },
+      backgroundColor:{
+        rosaEscuro:"var(--rosa-escuro)",
+      } 
     },
   },
   plugins: [],
