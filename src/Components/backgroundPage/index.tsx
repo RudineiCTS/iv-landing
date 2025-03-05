@@ -8,7 +8,7 @@ interface BackgroundPageProps {
 }
 export function BackgroundPage({children, className}:BackgroundPageProps){
     return (
-        <div className={twMerge("w-ful min-h-screen h-screen flex justify-center items-center", className)} style={{
+        <div className={twMerge("w-ful min-h-screen h-screen flex p-8", className)} style={{
             backgroundImage: `url('./assets/background_desktop.png')`,
             backgroundSize: "cover", 
             backgroundPosition: "center", 

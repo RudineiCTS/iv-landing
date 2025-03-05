@@ -11,7 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        rosaSuave:'var(--rosa-suave)'
+        rosaSuave:'var(--rosa-suave)',
+        rosaEscuro:"var(--rosa-escuro)",
       },
       backgroundColor:{
         rosaEscuro:"var(--rosa-escuro)",
