@@ -23,4 +23,5 @@
 body {
   color: var(--preto-suave);
   background: var(--cinza-claro);
+  overflow-x: hidden;
 }
