@@ -87,17 +87,17 @@ export default function Home() {
             </button>
             <ul className="flex flex-col items-center space-y-4">
               <li>
-                <a id='home' onClick={(e)=>handleSwitchPageInHeader(e.target.id)} className="text-lg cursor-pointer">
+                <a id='home' onClick={(e)=>handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)} className="text-lg cursor-pointer">
                   Home
                 </a>
               </li>
               <li>
-                <a id="about" onClick={(e)=>handleSwitchPageInHeader(e.target.id)}className="text-lg cursor-pointer">
+                <a id="about" onClick={(e)=>handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)}className="text-lg cursor-pointer">
                   Sobre
                 </a>
               </li>
               <li>
-                <a  id="consultancy" onClick={(e)=>handleSwitchPageInHeader(e.target.id)}className="text-lg cursor-pointer">
+                <a  id="consultancy" onClick={(e)=>handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)}className="text-lg cursor-pointer">
                   Consultoria
                 </a>
               </li>
