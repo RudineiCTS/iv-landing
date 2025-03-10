@@ -2,15 +2,16 @@ import { twMerge } from "tailwind-merge";
 
 interface HeaderComponentProps {
   switchPage: (e:string) => void;
+  className: string;
 }
-export function HeaderComponent({switchPage}:HeaderComponentProps ) {
+export function HeaderComponent({switchPage, className}:HeaderComponentProps ) {
   function handleSwitchPage(e:string){
     // console.log(e)
     switchPage(e);
   }
   return (
     <div
-      className={twMerge("flex max-w-xl mt-20 ml-10 gap-10 text-rosaEscuro")}
+      className={twMerge("flex max-w-xl mt-20 ml-10 gap-10 text-rosaEscuro", className)}
     >
       <h1 className="cursor-pointer" id='home' onClick={(e)=>handleSwitchPage(e.target.id)}>Home</h1>
       <h1 className="cursor-pointer" id="consultancy"onClick={(e)=>handleSwitchPage(e.target.id)} >Consultoria</h1>
