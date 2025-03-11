@@ -2,20 +2,16 @@ import { twMerge } from "tailwind-merge";
 
 interface HeaderComponentProps {
   switchPage: (e: string) => void;
-  className: string;
+  className?: string;
 }
-export function HeaderComponent({
-  switchPage,
-  className,
-}: HeaderComponentProps) {
+export function HeaderComponent({ switchPage }: HeaderComponentProps) {
   function handleSwitchPage(e: string) {
     switchPage(e);
   }
   return (
     <div
       className={twMerge(
-        "flex max-w-xl mt-20 ml-10 gap-10 text-rosaEscuro",
-        className
+        "max-w-xl mt-20 ml-10 gap-10 text-rosaEscuro md:w-full md:flex hidden"
       )}
     >
       <h1
