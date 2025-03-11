@@ -29,7 +29,7 @@ export default function Home() {
   }
   return (
     <BackgroundPage className="flex flex-col-reverse md:flex-row items-center min-h-screen bg-white">
-      <div className="w-full md:h-full md:flex-col md:flex md:w-1/2 p-6 md:p-12 text-center md:text-left">
+      <div className="w-full  text-center md:text-left">
         <Image
           src={"/assets/logo_1.png"}
           width={150}
@@ -43,7 +43,9 @@ export default function Home() {
           className={"md:w-full md:flex hidden"}
         />
         <div className="flex-grow md:flex md:flex-col justify-center p-6 md:p-12  md:text-left">
-          <h1 className="text-3xl md:text-5xl font-bold md:text-gray-700 text-black">Personal Trainer</h1>
+          <h1 className="text-3xl md:text-5xl font-bold md:text-gray-700 text-black">
+            Personal Trainer
+          </h1>
           <p className="text-lg md:text-xl font-semibold md:text-gray-700 mt-4 text-black">
             Transforme seus objetivos em resultados reais, com suporte
             especializado.
@@ -53,7 +55,10 @@ export default function Home() {
             atletas a alcançarem seus objetivos. Agora, como seu Personal
             Trainer Online, estou pronto para fazer o mesmo por você.
           </p>
-          <button onClick={handleSwitchPage} className="mt-6 px-6 py-3 md:w-52 md:bg-pink-600 md:text-white font-bold rounded-full bg-white text-pink-500">
+          <button
+            onClick={handleSwitchPage}
+            className="mt-6 px-6 py-3 md:w-52 md:bg-pink-600 md:text-white font-bold rounded-full bg-white text-pink-500"
+          >
             começar ➤
           </button>
         </div>
@@ -85,17 +90,35 @@ export default function Home() {
             </button>
             <ul className="flex flex-col items-center space-y-4">
               <li>
-                <a id='home' onClick={(e)=>handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)} className="text-lg cursor-pointer">
+                <a
+                  id="home"
+                  onClick={(e) =>
+                    handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)
+                  }
+                  className="text-lg cursor-pointer"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a id="about" onClick={(e)=>handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)}className="text-lg cursor-pointer">
+                <a
+                  id="about"
+                  onClick={(e) =>
+                    handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)
+                  }
+                  className="text-lg cursor-pointer"
+                >
                   Sobre
                 </a>
               </li>
               <li>
-                <a  id="consultancy" onClick={(e)=>handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)}className="text-lg cursor-pointer">
+                <a
+                  id="consultancy"
+                  onClick={(e) =>
+                    handleSwitchPageInHeader((e.target as HTMLAnchorElement).id)
+                  }
+                  className="text-lg cursor-pointer"
+                >
                   Consultoria
                 </a>
               </li>
