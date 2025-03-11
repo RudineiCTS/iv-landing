@@ -9,7 +9,7 @@ export function BackgroundPage({ children, className }: BackgroundPageProps) {
   return (
     <div
       className={twMerge(
-        "w-full md:min-h-screen md:h-screen flex p-8 ",
+        "w-full md:min-h-screen md:h-screen flex p-8 flex-col-reverse md:flex-row items-center min-h-screen bg-white",
         className
       )}
       style={{
