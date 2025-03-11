@@ -1,4 +1,4 @@
-import { CardComponent } from "@/Components/cardComponent";
+import { CardComponent } from "@/components123/cardComponent";
 import Image from "next/image";
 
 export default function Page() {

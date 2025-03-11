@@ -1,8 +1,8 @@
 "use client";
-import { BackgroundPage } from "@/Components/backgroundPage";
+import { BackgroundPage } from "@/components123/backgroundPage";
 import { Menu, X } from "lucide-react";
 
-import { HeaderComponent } from "@/Components/HerdarComponent";
+import { HeaderComponent } from "@/components123/HerdarComponent";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
