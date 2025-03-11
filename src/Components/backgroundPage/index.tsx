@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge"
 
 interface BackgroundPageProps {
     children: ReactNode,
-    className?:string,
+    className:string,
 
 }
 export function BackgroundPage({children, className}:BackgroundPageProps){

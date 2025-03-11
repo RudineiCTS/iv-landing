@@ -29,7 +29,7 @@ export default function Home() {
   }
   return (
     <BackgroundPage className="flex flex-col-reverse md:flex-row items-center min-h-screen bg-white">
-      <div className="w-full  text-center md:text-left">
+      <div className="w-full md:h-full md:flex-col md:flex md:w-1/2 p-6 md:p-12 text-center md:text-left">
         <Image
           src={"/assets/logo_1.png"}
           width={150}
