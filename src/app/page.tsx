@@ -1,13 +1,11 @@
 "use client";
 import { BackgroundPage } from "@/Components/backgroundPage";
-import { ButtonComponent } from "@/Components/ButtonComponent";
 import { Menu, X } from "lucide-react";
 
 import { HeaderComponent } from "@/Components/HerdarComponent";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
 export default function Home() {
   const useNavigate = useRouter();
   const [isOpen, setIsOpen] = useState(false);
