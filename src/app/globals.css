@@ -10,7 +10,9 @@
   --dourado-suave: #F4D03F;
   --preto-suave: #333333;
   --branco: #FFFFFF;
-  --font-base: open-sans
+  --font-base: open-sans;
+  --font-rosa-title: #C50E4C;
+  --font-rosa-paragraph: #BD0040;
 }
 
 @media (prefers-color-scheme: dark) {

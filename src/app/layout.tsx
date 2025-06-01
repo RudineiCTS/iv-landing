@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import {Noto_Serif_Tamil} from 'next/font/google'
+import {} from 'next/font/google'
+//NotoSerifTamilSlanted
+
 import "./globals.css";
 
 const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const notoSerifTamil = Noto_Serif_Tamil({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -20,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.className} antialiased`}
+        className={`${openSans.className}  ${notoSerifTamil.className} antialiased`}
       >
         {children}
       </body>
