@@ -13,6 +13,7 @@
   --font-base: open-sans;
   --font-rosa-title: #C50E4C;
   --font-rosa-paragraph: #BD0040;
+  --color-primary: #D2386C;
 }
 
 @media (prefers-color-scheme: dark) {
