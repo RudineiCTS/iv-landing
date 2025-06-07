@@ -26,7 +26,7 @@ export function InputComponentTextArea({title, handleSetValue, field, dataForFor
         <label htmlFor={title} className="mt-5">{title}</label>
         <textarea 
           name={title} 
-          className=" p-3 rounded-lg h-28 resize-none"
+          className=" p-3 rounded-lg h-32 resize-none"
           onChange={e=> handleSetValue(field, e.target.value)}
           value={dataForForm?.[field]} 
           />

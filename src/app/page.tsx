@@ -36,7 +36,7 @@ export default function Home() {
   }
 
   const sendFormToContactWA = ()=>{
-    const phoneNumber = process.env.VITE_PHONE_NUMBER;
+    const phoneNumber = process.env.VITE_P   HONE_NUMBER;
     const message = encodeURIComponent(
       `Olá, meu nome é ${formData.nome}\n` +
       `Meu objetivo é:\n${formData.objetivo}\n\n` +
@@ -51,7 +51,7 @@ export default function Home() {
       return (
       <>
         <BackgroundPage className="">
-          <div className="md:w-[1440px] flex flex-col justify-center items-center">
+          <div className="md:w-[1440px] flex flex-col justify-center items-center mx-auto">
           <HomePage handleClickNavigateToPage={scrollToSection}/>
           <MetodologiaPage />
           <FormularioPage 
