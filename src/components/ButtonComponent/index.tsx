@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import { IconType } from "react-icons"
 import { twMerge } from "tailwind-merge";
 
 interface ButtonComponentProps{
@@ -9,24 +8,34 @@ interface ButtonComponentProps{
     handleClick?:()=>void
     handleSendForm?:()=> void
 }
+
 interface ButtonComponentSendFormProps{
     title:string;
     handleSendForm?:()=> void
 }
+
 export function ButtonComponent({children, icon, handleClick, className}:ButtonComponentProps){
     return (
-        <div onClick={handleClick}className={twMerge("w-48 bg-rosaEscuro h-10 rounded-full text-white flex justify-evenly items-center cursor-pointer", className)}>
+        <button 
+            onClick={handleClick}
+            className={twMerge(
+                "w-40 sm:w-48 bg-[var(--color-primary)] h-10 md:h-12 rounded-full text-white flex justify-center items-center gap-2 cursor-pointer hover:bg-pink-700 transition-colors font-medium text-sm md:text-base", 
+                className
+            )}
+        >
             {children}
             {icon}
-        </div>
+        </button>
     )
 }
 
 export function ButtonComponentSendForm({title, handleSendForm}:ButtonComponentSendFormProps){
     return (
-        
-        <div className={twMerge("bg-[var(--color-primary)] p-4 rounded-2xl cursor-pointer")} onClick={handleSendForm}>
-            <strong className="text-white px-2">{title}</strong>
-        </div>
+        <button 
+            className="bg-[var(--color-primary)] p-3 md:p-4 rounded-xl md:rounded-2xl cursor-pointer hover:bg-pink-700 transition-colors w-full sm:w-auto"
+            onClick={handleSendForm}
+        >
+            <strong className="text-white px-2 text-sm md:text-base">{title}</strong>
+        </button>
     )
 }
