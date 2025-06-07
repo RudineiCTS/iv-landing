@@ -2,7 +2,6 @@
 import { BackgroundPage } from "@/components/backgroundPage";
 import "./globals.css";
 
-
 export type MyFormData = {
   nome: string;
   email: string;
@@ -10,11 +9,11 @@ export type MyFormData = {
   contato:string;
 };
 
-
 import { MetodologiaPage } from "./Page/MetodologiaPage";
 import { FormularioPage } from "./Page/FormularioPage";
 import { HomePage } from "./Page/HomePage";
 import { useRef, useState } from "react";
+
 export default function Home() {
   const [formData, setFormData] = useState<MyFormData>({
     nome: '',
@@ -22,6 +21,7 @@ export default function Home() {
     objetivo: '',
     contato:''
   });
+  
   function handleSetValue(name: keyof MyFormData, value: string) {
     setFormData(prev => ({
       ...prev,
@@ -36,22 +36,23 @@ export default function Home() {
   }
 
   const sendFormToContactWA = ()=>{
-    const phoneNumber = process.env.VITE_P   HONE_NUMBER;
+    const phoneNumber = process.env.VITE_PHONE_NUMBER;
     const message = encodeURIComponent(
       `Olá, meu nome é ${formData.nome}\n` +
       `Meu objetivo é:\n${formData.objetivo}\n\n` +
       `Meus contatos são:\n${formData.contato}\n${formData.email}`
     );
   
-      const url = `https://wa.me/${phoneNumber}?text=${message}`;
-      console.log(`https://wa.me/${phoneNumber}?text=${message}`);
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    console.log(`https://wa.me/${phoneNumber}?text=${message}`);
 
-      window.open(url, '_blank');
+    window.open(url, '_blank');
   }
-      return (
-      <>
-        <BackgroundPage className="">
-          <div className="md:w-[1440px] flex flex-col justify-center items-center mx-auto">
+  
+  return (
+    <>
+      <BackgroundPage className="">
+        <div className="w-full max-w-7xl flex flex-col justify-center items-center">
           <HomePage handleClickNavigateToPage={scrollToSection}/>
           <MetodologiaPage />
           <FormularioPage 
@@ -60,8 +61,8 @@ export default function Home() {
             formData={formData}
             sendForm={sendFormToContactWA}
           />
-          </div> 
-        </BackgroundPage>
-      </>
+        </div> 
+      </BackgroundPage>
+    </>
   );
 }
