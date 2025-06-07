@@ -11,7 +11,7 @@ interface FormularioPage{
 }
 export function FormularioPage({archorLinks, handleSetValue, formData, sendForm}:FormularioPage){
   return (
-    <section className="mt-20 md:mt-40 flex justify-center items-center flex-col px-4" ref={archorLinks[0]}>
+    <section className="mt-20 md:mt-40 flex justify-center items-center flex-col px-4\" ref={archorLinks[0]}>
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[var(--font-rosa-title)] text-center">
         Consultoria
       </h1>
