@@ -6,62 +6,60 @@ export type MyFormData = {
   nome: string;
   email: string;
   objetivo: string;
-  contato:string;
+  contato: string;
 };
 
-import { MetodologiaPage } from "./Page/MetodologiaPage";
+import { useRef, useState } from "react";
 import { FormularioPage } from "./Page/FormularioPage";
 import { HomePage } from "./Page/HomePage";
-import { useRef, useState } from "react";
+import { MetodologiaPage } from "./Page/MetodologiaPage";
 
 export default function Home() {
   const [formData, setFormData] = useState<MyFormData>({
-    nome: '',
-    email: '',
-    objetivo: '',
-    contato:''
+    nome: "",
+    email: "",
+    objetivo: "",
+    contato: "",
   });
-  
+
   function handleSetValue(name: keyof MyFormData, value: string) {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   }
 
-  const sectionRef = useRef<HTMLDivElement| null>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToSection = () =>{
-    sectionRef.current?.scrollIntoView({behavior:'smooth'})
-  }
+  const scrollToSection = () => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
-  const sendFormToContactWA = ()=>{
-    const phoneNumber = process.env.VITE_PHONE_NUMBER;
+  const sendFormToContactWA = () => {
+    const tell = "5517991035529";
     const message = encodeURIComponent(
       `Olá, meu nome é ${formData.nome}\n` +
-      `Meu objetivo é:\n${formData.objetivo}\n\n` +
-      `Meus contatos são:\n${formData.contato}\n${formData.email}`
+        `Meu objetivo é:\n${formData.objetivo}\n\n` +
+        `Meus contatos são:\n${formData.contato}\n${formData.email}`
     );
-  
-    const url = `https://wa.me/${phoneNumber}?text=${message}`;
-    console.log(`https://wa.me/${phoneNumber}?text=${message}`);
 
-    window.open(url, '_blank');
-  }
-  
+    const url = `https://wa.me/5517991035529?text=${message}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <BackgroundPage className="">
         <div className="w-full max-w-7xl flex flex-col justify-center items-center">
-          <HomePage handleClickNavigateToPage={scrollToSection}/>
+          <HomePage handleClickNavigateToPage={scrollToSection} />
           <MetodologiaPage />
-          <FormularioPage 
-            archorLinks={[sectionRef]} 
+          <FormularioPage
+            archorLinks={[sectionRef]}
             handleSetValue={handleSetValue}
             formData={formData}
             sendForm={sendFormToContactWA}
           />
-        </div> 
+        </div>
       </BackgroundPage>
     </>
   );
