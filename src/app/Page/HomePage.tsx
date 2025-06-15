@@ -55,11 +55,11 @@ export function HomePage({ handleClickNavigateToPage }: homePageProps) {
       <div className="w-full md:w-1/2 flex justify-center md:mt-16 px-4 md:px-0">
         <div className="w-full max-w-md md:max-w-none">
           <Image
-            src={"/assets/isabela_background.svg"}
+            src={"/assets/is-profile.png"}
             alt="isabela"
             width={540}
             height={670}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-3xl shadow-lg object-cover md:object-contain md:max-w-2xl mx-auto md:mx-0 md:h-full md:w-full"
           />
         </div>
       </div>
