@@ -13,6 +13,7 @@ import { useRef, useState } from "react";
 import { FormularioPage } from "./Page/FormularioPage";
 import { HomePage } from "./Page/HomePage";
 import { MetodologiaPage } from "./Page/MetodologiaPage";
+import { FormClient } from "./Page/hidden_page/FormClient";
 
 export default function Home() {
   const [formData, setFormData] = useState<MyFormData>({
@@ -51,14 +52,15 @@ export default function Home() {
     <>
       <BackgroundPage className="">
         <div className="w-full max-w-7xl flex flex-col justify-center items-center">
-          <HomePage handleClickNavigateToPage={scrollToSection} />
+          {/* <HomePage handleClickNavigateToPage={scrollToSection} />
           <MetodologiaPage />
           <FormularioPage
             archorLinks={[sectionRef]}
             handleSetValue={handleSetValue}
             formData={formData}
             sendForm={sendFormToContactWA}
-          />
+          /> */}
+          <FormClient/>
         </div>
       </BackgroundPage>
     </>
