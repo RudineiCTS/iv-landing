@@ -1,30 +1,28 @@
-import * as React from "react";
-import { RadioGroup } from "radix-ui";
-import "./styles.css";
+import * as RadioGroup from "@radix-ui/react-radio-group";
+import '../RadioButton/styles.css'
 
-interface RadioButtonProps {
-	value:string,
-	inputName:string
-}
-
-export function RadioButtonComponent({value, inputName}:RadioButtonProps){
+export function RadioButtonComponent({
+  value,
+  inputName,
+  checked,
+}: {
+  value: string;
+  inputName: string;
+  checked: boolean
+}) {
   return (
-    <>
-    <RadioGroup.Root
-			className="RadioGroupRoot"
-			defaultValue="default"
-			aria-label="View density"
-		>
-			<div style={{ display: "flex", alignItems: "center" }}>
-				<RadioGroup.Item className="RadioGroupItem" value="default" id={inputName}>
-					<RadioGroup.Indicator className="RadioGroupIndicator" />
-				</RadioGroup.Item>
-				<label className="Label" htmlFor={inputName}>
-					{value}
-				</label>
-			</div>
-		</RadioGroup.Root>
-    </>
-  )
+    <div style={{ display: "flex", alignItems: "center" }} >
+      <RadioGroup.Item
+        className="RadioGroupItem"
+        value={value}
+        id={inputName}
+        checked={checked}
+      >
+        <RadioGroup.Indicator className="RadioGroupIndicator" />
+      </RadioGroup.Item>
+      <label className="Label" htmlFor={inputName}>
+        {value}
+      </label>
+    </div>
+  );
 }
-    
