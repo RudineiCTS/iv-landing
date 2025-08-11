@@ -1,5 +1,6 @@
 import { CardText } from "@/components/cardText";
 import gsap from "gsap";
+import { PiTarget } from "react-icons/pi";
 
 export function MetodologiaPage() {
   // gsap.registerPlugin(ScrollTrigger,Draggable);
@@ -11,12 +12,16 @@ export function MetodologiaPage() {
       </h1>
       <div className="flex flex-col gap-4 md:gap-5 w-full max-w-4xl">
         <CardText
+        // Icon={<PiTarget size={32} />} 
           title="Treinar com propósito, cuidado e estratégia."
-          text="Minha metodologia é voltada para pessoas reais, com rotinas diferentes, corpos únicos e objetivos diversos — seja você iniciante, retornando à prática ou buscando evolução com segurança."
+          text=" Minha metodologia foi criada para pessoas reais com rotinas reais - inclusive aquelas que tem pouco tempo, falta de organização ou que estão tentando retornar os treinos"
+          textAlternative= " Aqui, não existe fórmula mágica.  Existe consistência, adaptação, planejamento estratégico, feito sob medida para seu objetivo."
         />
         <CardText
           title="Escuta Individualizada"
-          text="Antes de tudo, eu escuto você. Entender sua rotina, suas limitações e seu histórico é essencial para criar um plano realista, eficaz e sustentável."
+          text="Antes de qualquer exercicio, eu quero te ouvir."
+          textAlternative="Entendo sua rotina, suas limitações, seu histórico fisíco e emocional"
+          textAlternative2= "A partir disso, desenvolvo um plano de treino totalmente individualizado, que respeita seu tempo e potencializa seus resultado com segurança." 
         />
         <CardText
           title="Treinos Personalizados"
@@ -28,7 +33,10 @@ export function MetodologiaPage() {
         />
         <CardText
           title="Resultado com leveza e constância"
-          text="Muito além da estética, meu foco é proporcionar autonomia, disposição, prevenção de lesões e bem-estar físico e emocional."
+          text="Mais do que estética, o foco é:."
+          type="topic"
+          topicsArray={[' Saude e bem estar físico.', 'Prevensão de lesões', 'Performance consciente', ' Qualidade de vida e Equilíbrio emocional']}
+          textAlternative2="Você vai sentir progresso real - sem exageros, sem pressão, sem fórmulas prontas."
         />
       </div>
     </div>

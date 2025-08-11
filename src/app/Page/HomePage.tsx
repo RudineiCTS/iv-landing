@@ -22,17 +22,19 @@ export function HomePage({ handleClickNavigateToPage }: homePageProps) {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
         >
-          <div className="flex-grow flex flex-col justify-center gap-4 md:gap-7 p-4 md:p-12">
+          <div className="flex-grow flex flex-col justify-center gap-4 md:gap-7 p-4 md:py-12 md:px-2">
             <h1 className="text-2xl sm:text-3xl md:text-5xl text-[var(--font-rosa-title)] font-bold italic leading-tight font-poppins">
               TREINE COM A ISA
             </h1>
-            <p className="text-base sm:text-lg md:text-2xl font-semibold text-[var(--font-rosa-paragraph)] mt-2 md:mt-4 font-sans">
-              Transforme seus objetivos em resultados reais, com suporte
-              especializado.
+            <p className="text-[var(--font-rosa-paragraph)] mt-2 md:mt-4 text-pretty text-base sm:text-lg md:text-xl font-poppins">
+              Olá! Eu sou <strong> Isabella Viana </strong>, <br /> formada em educação física e atuo <strong> há mais de 3 anos </strong> em treinos personalizados.          
             </p>
             <p className="text-[var(--font-rosa-paragraph)] mt-2 md:mt-4 text-pretty text-base sm:text-lg md:text-xl font-poppins">
-              Meu nome é Isabella Viana, e sou personal trainer, e estou aqui
-              para ajudar você alcançar seus objetivos
+              Atendo <strong> presencialmente na academia Orangym </strong> e também de <strong> forma online </strong>, acompanhando aluno de diferentes níveis - desde os iniciantes até os mais avançados.
+            </p>
+            <p className="text-[var(--font-rosa-paragraph)] mt-2 md:mt-4 text-pretty text-base sm:text-lg md:text-xl font-poppins md:leading-8">
+              Minha missão é simples: <strong>Fazer você treinar com propósito, cuidado e estratégia</strong> <br />
+              Resultado reais, respeitando sua rotina e o seu momento
             </p>
             <div className="flex justify-center md:justify-start">
               <motion.button

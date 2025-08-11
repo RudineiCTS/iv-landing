@@ -28,34 +28,11 @@ export function FormularioPage({
       </h1>
       <div className="w-full max-w-6xl flex flex-col lg:flex-row mt-8 md:mt-14 gap-6 md:gap-7 justify-between mx-auto">
         <div className="w-full lg:w-3/4 bg-white rounded-2xl p-4 md:p-6 flex flex-col gap-4 py-8 md:py-12">
-          <div>
-            <h2 className="text-[var(--font-rosa-title)] font-bold mb-2 text-sm sm:text-base md:text-lg font-poppins">
-              ACOMPANHAMENTO COMPLETO PARA SEU OBJETIVO
-            </h2>
-            <p className="text-[var(--font-rosa-paragraph)] text-sm sm:text-base  font-poppins">
-              Seja você iniciante ou já praticante, estou aqui para te ajudar a
-              conquistar resultados reais com segurança e estratégia.
+        <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-[var(--font-rosa-title)] mb-2 md:mb-3 font-poppins"> Quer elevar o nível de seus treinos? </h1>
+        
+           <p className="text-[var(--font-rosa-paragraph)] text-sm sm:text-base  font-poppins">
+             Preencha o formulário abaixo com suas informações e em breve entro em contato com você
             </p>
-          </div>
-          <div>
-            <h2 className="text-[var(--font-rosa-title)] font-bold mb-2 text-sm sm:text-base md:text-lg  font-poppins">
-              Atendimento Presencial
-            </h2>
-            <p className="text-[var(--font-rosa-paragraph)] text-sm sm:text-base  font-poppins">
-              Sessões exclusivas com foco total em você, com correções,
-              motivação e técnica profissional. Seu corpo responde quando você
-              tem um plano certo. Vamos juntos nessa jornada?
-            </p>
-          </div>
-          <div>
-            <h2 className="text-[var(--font-rosa-title)] font-bold mb-2 text-sm sm:text-base md:text-lg  font-poppins">
-              Consultoria Online Personalizada
-            </h2>
-            <p className="text-[var(--font-rosa-paragraph)] text-sm sm:text-base  font-poppins">
-              Treinos e orientações sob medida para você treinar de onde
-              estiver, com flexibilidade e acompanhamento constante.
-            </p>
-          </div>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
