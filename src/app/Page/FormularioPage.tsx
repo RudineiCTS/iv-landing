@@ -66,7 +66,6 @@ export function FormularioPage({
           </form>
           </div>
         </div>
-
    </section>
    
   );
