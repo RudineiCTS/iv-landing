@@ -1,17 +1,25 @@
 import { twMerge } from "tailwind-merge";
+import { ReactNode } from "react";
 
-interface CardText {
+interface CardTextProps {
   title: string;
-  text: string;
+  text: ReactNode;
   className?: string;
-  Icon?: any
-  textAlternative?: string;
-  textAlternative2?: string;
-  type?: 'topic' | 'text'
+  Icon?: any;
+  textAlternative?: ReactNode; // 👈 agora pode ser string ou JSX
+  textAlternative2?: ReactNode; // 👈 idem
+  type?: "topic" | "text";
   topicsArray?: string[];
 }
 
-export function CardText({type, title, text, textAlternative, textAlternative2, topicsArray }: CardText) {
+export function CardText({
+  type,
+  title,
+  text,
+  textAlternative,
+  textAlternative2,
+  topicsArray,
+}: CardTextProps) {
   return (
     <div
       className={twMerge(
@@ -19,41 +27,35 @@ export function CardText({type, title, text, textAlternative, textAlternative2, 
       )}
     >
       <div>
-
-      <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[var(--font-rosa-title)] mb-2 md:mb-3 font-poppins">
-        {title}
-      </h2>
-      {/* <Icon/> */}
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[var(--font-rosa-title)] mb-2 md:mb-3 font-poppins">
+          {title}
+        </h2>
+        {/* <Icon/> */}
       </div>
+
       <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-poppins">
         {text}
       </p>
-      {textAlternative &&
-        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-poppins mt-1" >
-        {textAlternative}
-      </p>
-      }
-      {textAlternative2 &&
-        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-poppins mt-1" >
-        {textAlternative2}
-      </p>      
-      }
-      {type === "topic"?
-        <>
-        <ul className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-poppins mt-1" >
-          {topicsArray?.map((item)=> 
-          (
-            <li>
-              {item}
-            </li>
-          )
-          )}
-         
+
+      {textAlternative && (
+        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-poppins mt-1">
+          {textAlternative}
+        </p>
+      )}
+
+      {textAlternative2 && (
+        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-poppins mt-1">
+          {textAlternative2}
+        </p>
+      )}
+
+      {type === "topic" && (
+        <ul className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-poppins mt-1">
+          {topicsArray?.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
-        </>:
-        <>
-        </>
-      }
+      )}
     </div>
   );
 }
